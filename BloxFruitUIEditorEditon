@@ -3216,17 +3216,27 @@ Topbar.Hide.MouseButton1Click:Connect(function()
 	setVisibility(Hidden, not useMobileSizing)
 end)
 
+local Allkeybind = {
+    Enum.KeyCode.K,
+    Enum.KeyCode.End,
+    Enum.KeyCode.Home,
+    Enum.KeyCode.Insert,
+    Enum.KeyCode.Delete,
+}
+
 hideHotkeyConnection = UserInputService.InputBegan:Connect(function(input, processed)
-	if (input.KeyCode == Enum.KeyCode.End and not processed) then
-		if Debounce then return end
-		if Hidden then
-			Hidden = false
-			Unhide()
-		else
-			Hidden = true
-			Hide()
-		end
-	end
+	for i,v in pairs(AllKeybind) do
+        if (input.KeyCode == v and not processed) then
+            if Debounce then return end
+            if Hidden then
+                Hidden = false
+                Unhide()
+            else
+                Hidden = true
+                Hide()
+            end
+        end
+    end
 end)
 
 if MPrompt then
