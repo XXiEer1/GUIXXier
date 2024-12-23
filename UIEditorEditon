@@ -3217,12 +3217,12 @@ Topbar.Hide.MouseButton1Click:Connect(function()
 end)
 
 local AllKeybind = { -- Ensure the variable name matches
-    Enum.KeyCode.X,
     Enum.KeyCode.K,
     Enum.KeyCode.End,
     Enum.KeyCode.Home,
     Enum.KeyCode.Insert,
     Enum.KeyCode.Delete,
+	Enum.KeyCode.X
 }
 
 hideHotkeyConnection = UserInputService.InputBegan:Connect(function(input, processed)
