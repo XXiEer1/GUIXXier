@@ -3217,6 +3217,7 @@ Topbar.Hide.MouseButton1Click:Connect(function()
 end)
 
 local AllKeybind = { -- Ensure the variable name matches
+    Enum.KeyCode.X,
     Enum.KeyCode.K,
     Enum.KeyCode.End,
     Enum.KeyCode.Home,
